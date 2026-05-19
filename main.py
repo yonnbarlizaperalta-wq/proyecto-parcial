@@ -20,3 +20,6 @@ if __name__ == "__main__":
         otros = countries[1:]
 
         base.comparar(otros)
+
+if __name__ == "__main__":
+    main()
