@@ -13,4 +13,10 @@ if __name__ == "__main__":
     countries = api.by_names(names)
 
     for c in countries:
-    print(c)
+        print(c)
+
+    if len(countries) > 1:
+        base = countries[0]
+        otros = countries[1:]
+
+        base.comparar(otros)
