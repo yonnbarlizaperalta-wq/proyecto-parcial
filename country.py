@@ -29,10 +29,10 @@ class Country:
     def comparar(self, otros: list):
         todos = [self] + otros
 
-    print("Pais | Poblacion | Area | Densidad")
+    print("Pais , Poblacion , Area , Densidad")
 
     for p in todos:
-        print(f"{p.nombre} | {p.poblacion} | {p.area} | {round(p.density(), 2)}")
+        print(f"{p.nombre} {p.poblacion}  {p.area}  {round(p.density(), 2)}")
 
     mayor_poblacion = todos[0]
     mayor_area = todos[0]
@@ -52,4 +52,5 @@ class Country:
     print("Mayor poblacion:", mayor_poblacion.nombre)
     print("Mayor area:", mayor_area.nombre)
     print("Mayor densidad:", mayor_densidad.nombre)
+    
     
