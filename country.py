@@ -31,7 +31,25 @@ class Country:
 
     print("Pais | Poblacion | Area | Densidad")
 
-    for p in todos: 
-        print(p.nombre, p.poblacion, p.area, p.density())
-        
+    for p in todos:
+        print(f"{p.nombre} | {p.poblacion} | {p.area} | {round(p.density(), 2)}")
+
+    mayor_poblacion = todos[0]
+    mayor_area = todos[0]
+    mayor_densidad = todos[0]
+
+    for p in todos:
+        if p.poblacion > mayor_poblacion.poblacion:
+            mayor_poblacion = p
+
+        if p.area > mayor_area.area:
+            mayor_area = p
+
+        if p.density() > mayor_densidad.density():
+            mayor_densidad = p
+
+    print("\nResultados:")
+    print("Mayor poblacion:", mayor_poblacion.nombre)
+    print("Mayor area:", mayor_area.nombre)
+    print("Mayor densidad:", mayor_densidad.nombre)
     
