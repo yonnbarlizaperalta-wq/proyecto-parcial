@@ -24,4 +24,11 @@ class CountryAPI:
          for item in data:
             countries.append(Country(item))
             return countries
-         
+         def by_names(self, names: list):
+             countries = []
+             with ThreadPoolExecutor() as executor:
+                 results = executor.map(self.by_name, names) 
+                 for country in results:
+                     if country:
+                         countries.append(country)
+                         return countries
