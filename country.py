@@ -26,3 +26,12 @@ class Country:
             return 0
         return self.poblacion / self.area
     
+    def comparar(self, otros: list):
+        todos = [self] + otros
+
+    print("Pais | Poblacion | Area | Densidad")
+
+    for p in todos: 
+        print(p.nombre, p.poblacion, p.area, p.density())
+        
+    
