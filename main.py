@@ -11,3 +11,6 @@ if __name__ == "__main__":
     names = ["colombia", "peru", "germany", "canada"]
 
     countries = api.by_names(names)
+
+    for c in countries:
+    print(c)
