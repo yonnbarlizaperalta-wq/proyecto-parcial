@@ -5,7 +5,7 @@ class Country:
         capitales = data.get("capital")
         self.capital = capitales[0] if capitales else "N/A"
 
-        self.poblacion = data.get("population", 0)
+        self.poblacion = data.get("poblacion", 0)
         self.area = data.get("area", 0)
         self.region = data.get("region", "N/A")
 
@@ -17,3 +17,12 @@ class Country:
 
     def comparar(self, otros: list):
         pass
+    
+    def __str__(self) -> str:
+        return f"{self.nombre} Capital: {self.capital}  Población: {self.poblacion}  Área: {self.area}"
+    
+    def density(self) -> float:
+        if self.area == 0:
+            return 0
+        return self.poblacion / self.area
+    
