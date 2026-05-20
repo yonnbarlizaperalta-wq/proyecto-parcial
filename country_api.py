@@ -12,12 +12,11 @@ class CountryAPI:
         response = requests.get(url)
 
         if response.status_code != 200:
-            print("Error con:", name)   # 👈 IMPORTANTE PARA DEBUG
+            print("Error con:", name) 
             return None
 
         data = response.json()
 
-        # 👇 ESTO ES LA CLAVE
         if isinstance(data, list) and len(data) > 0:
             return Country(data[0])
 
